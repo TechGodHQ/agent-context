@@ -6,11 +6,9 @@ targets:
   - name: agents
     enabled: true
     output_dir: .
-skills: []
+skills:
+  - name: review
+    path: skills/review.md
 config:
-  - name: context
-    path: config/context.md
-  - name: development
-    path: config/development.md
-  - name: workflow
-    path: config/workflow.md
+  - name: org
+    path: config/org.md
