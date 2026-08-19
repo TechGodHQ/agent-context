@@ -1,0 +1,14 @@
+version: 1
+source:
+  type: local
+  path: .creed
+targets:
+  - name: agents
+    enabled: true
+    output_dir: .
+skills:
+  - name: review
+    path: skills/review.md
+config:
+  - name: org
+    path: config/org.md
