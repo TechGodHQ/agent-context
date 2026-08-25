@@ -7,6 +7,10 @@ targets:
     enabled: true
     output_dir: .
 skills:
+  - name: architecture
+    path: skills/architecture.md
+  - name: implementation
+    path: skills/implementation.md
   - name: review
     path: skills/review.md
 config:
