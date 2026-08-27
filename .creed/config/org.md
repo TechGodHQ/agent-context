@@ -24,9 +24,9 @@ requiring an LLM at runtime.
   and treat difficulty using it as a product defect.
 
 Before changing repository boundaries, dependencies, public contracts, or
-transport surfaces, read `.creed/skills/architecture.md`. Before implementing
-production behavior, read `.creed/skills/implementation.md`. Before reviewing
-any pull request, read `.creed/skills/review.md`.
+transport surfaces, follow the Architecture Skill below. Before implementing
+production behavior, follow the Implementation Skill below. Before reviewing
+any pull request, follow the Org Review Skill below.
 
 ## Public + MIT, Always
 
