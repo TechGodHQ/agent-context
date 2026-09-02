@@ -43,3 +43,22 @@ repositories or commit secrets.
 - Land changes through pull requests rather than direct pushes to `main`.
 - Auto-merge is permitted when CI is green and gate confidence is at least
   0.80.
+
+## Public Release Authority
+
+- Published tags and releases are immutable. Never move, delete, or rewrite a
+  published tag to repair release contents; publish a new, truthfully versioned
+  correction instead.
+- Agents may prepare correction-release changes, update version constants and
+  release documentation, and run release verification without separate
+  approval.
+- Publishing a new public tag or release requires Shiv's authorization unless
+  the linked ticket or its comments already explicitly authorize that exact
+  release. Existing explicit authorization is sufficient and must not be
+  requested twice.
+- When authorization is absent, report an explicit `Blocked: release
+  authorization` state naming the proposed version. Do not silently re-plan or
+  leave the work parked without a labeled blocker.
+- After authorization, verify the remote tag/release and a clean consumer
+  installation or equivalent public-boundary check before declaring the release
+  complete.
