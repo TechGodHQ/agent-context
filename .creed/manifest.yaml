@@ -6,13 +6,12 @@ targets:
   - name: agents
     enabled: true
     output_dir: .
-skills:
+config:
+  - name: org
+    path: config/org.md
   - name: architecture
     path: skills/architecture.md
   - name: implementation
     path: skills/implementation.md
   - name: review
     path: skills/review.md
-config:
-  - name: org
-    path: config/org.md

@@ -14,15 +14,18 @@ organization layer for Creed's layered-source design.
 - `.creed/skills/review.md` — organization-wide pull request review process and
   blocking findings.
 
-The generated `AGENTS.md` contains explicit trigger-and-path pointers to these
-skills so generic AGENTS consumers can load the source files when relevant.
+The generated `AGENTS.md` renders the constitution and all three procedure
+skills inline as config entries, so generic AGENTS consumers reach every
+central procedure without pointer files or duplicated source.
 
 Consuming repositories keep repository-specific context in their local
 `.creed/` directory. Organization-wide context remains centralized here.
 
 ## Consumption Status
 
-Layered local-plus-Git sources are tracked in COD-407 and are not available in
-Creed v0.3.0. In that release, `creed pull` replaces the consumer's local
-`.creed/` tree rather than merging this organization layer with repository
-context. Do not use it as a layered install until COD-407 lands.
+Creed's layered local-plus-Git sources shipped in `afe5dbb` (post-v0.3.0
+main; see COD-407). Consumers pin this repository as a git layer — for
+example `remote: https://github.com/TechGodHQ/agent-context.git` with a
+pinned commit `ref:` — and Creed composes it with the repository-local
+`.creed/` layer. The installed v0.3.0 binary rejects layered manifests;
+build Creed from main until a layered-capable release ships.
