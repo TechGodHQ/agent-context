@@ -43,7 +43,14 @@ Block approval when the change:
 - omits feasible integration or agent-acceptance evidence, or omits the
   infeasibility rationale and strongest reproducible fallback;
 - cannot be operated from committed repository guidance;
-- leaves generated output or cross-repository compatibility unverified.
+- leaves generated output or cross-repository compatibility unverified;
+- couples core functionality to a specific provider. Providers are libraries,
+  not routes: public operations are named for the noun (e.g. `ingest_batch`), a
+  provider name must never appear in generated-operation names, HTTP paths,
+  core crates, or hardcoded source-string checks outside the provider crate
+  itself. New providers are added by depending on the provider crate plus one
+  config entry — if adding a provider would touch core/server/cli/mcp surfaces,
+  block and redesign.
 
 ## Review Bias
 

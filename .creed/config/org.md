@@ -62,3 +62,18 @@ repositories or commit secrets.
 - After authorization, verify the remote tag/release and a clean consumer
   installation or equivalent public-boundary check before declaring the release
   complete.
+
+## Ticket Writing
+
+- **Name operations for the noun, not the source.** A ticket that says
+  `POST /ingest/herdr` will produce a route named after a provider. Write
+  `POST /ingest` accepting a source-tagged batch; the provider belongs to a
+  mapper library, not the surface. Ticket authors (human or agent) must specify
+  where the provider boundary lives before implementation begins.
+- **Providers are libraries, not routes.** Adding a provider = new mapper in the
+  provider crate + one config entry (allowlist/secret). If a ticket implies
+  touching core/server/cli/mcp to add a provider, the ticket is wrong — flag it
+  rather than implementing it literally.
+- **Tickets inherit rulings.** When a direction comment supersedes the ticket
+  description (see COD-437 fc812e1d), the ticket body must be updated to match,
+  so later readers and runners do not re-implement the stale text.
